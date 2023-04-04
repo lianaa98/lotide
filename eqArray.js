@@ -18,6 +18,6 @@ const eqArrays = (firstArr, secondArr) => {
     }
   }
   return true;
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
