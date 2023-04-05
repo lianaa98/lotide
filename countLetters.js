@@ -4,7 +4,7 @@ const countLetters = function(sentence) {
   let results = {};
 
   for (let i of str) {
-    if (results[i]) results[i] += 1;
+    if (results[i])  results[i] += 1;
     if (!results[i]) results[i] = 1;
   }
 
