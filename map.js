@@ -1,7 +1,5 @@
 // map function will take in 1) array 2) call back function.
 
-const { assert } = require("console");
-
 const words = ["ground", "control", "to", "major", "tom"];
 
 const map = function(array, callback) {
