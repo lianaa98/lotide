@@ -11,29 +11,30 @@ const eqObjects = function(object1, object2) {
   console.log("keys1: ", keys1);
   console.log("keys2: ", keys2);
 
-
+  
   if (!areKeysIdentical) {
     console.log("is this logged?");
     return false;
   } 
-
+  
   for (let k of keys1) {
-
+    
     console.log("object1[k] (b): ", object1[k], typeof object1[k]);
     console.log("object2[k] (b): ", object2[k], typeof object2[k]);
-
+    
     // if object.key.value is NOT object => compare values => true/false
     if (typeof object1[k] !== "object") {
-      if (object1[k] !== object2[k]) return "comparing values: " + false;  // if values are NOT equal => return false
-      continue;                                                            // if values are equal => continue the loop
+      if (object1[k] !== object2[k]) return false;  // if values are NOT equal => return false
+      continue;                                     // if values are equal => continue the loop (skip below)
     }
-
-    console.log("recursion now!!");
-    return eqObjects(object1[k], object2[k]);  // JUMP out of everything if a single false gets returned!
-
+    
+    console.log("Found object: recursion now!!");
+    
+    if (eqObjects(object1[k], object2[k]) === false) return false;  // JUMP out of everything if a single false gets returned! But continue on if it's true...
+    
   }
-  return true;
 
+  return true;
 };
 
 const eqArrays = (firstArr, secondArr) => {
