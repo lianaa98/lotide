@@ -13,3 +13,5 @@ const flatten = (array) => {
   }
   return flattenedArr;
 };
+
+module.exports = flatten

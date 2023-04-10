@@ -1,24 +1,3 @@
-const eqArrays = (firstArr, secondArr) => {
-
-  if (firstArr.length !== secondArr.length) {
-    return false;
-  } else {
-    for (let i = 0; i < firstArr.length; i++) {
-      if (firstArr[i] !== secondArr[i]) return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = (first, second) => {
-
-  if (eqArrays(first, second)) {
-    console.log(`✅✅✅ Assertion Passed: ${first} === ${second}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${first} !==  ${second}`);
-  }
-};
-
 const without = (source, itemsToRemove) => {
   let newArr = [];
 
@@ -32,7 +11,9 @@ const without = (source, itemsToRemove) => {
   return newArr;
 };
 
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+module.exports = without;
+
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]); // no need to capture return value for this test case
+// // Make sure the original array was not altered by the without function
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
