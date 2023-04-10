@@ -15,7 +15,7 @@ const countOnly = (allItems, itemsToCount) => {
   return count;
 };
 
-module.exports = countOnly;
+module.exports = countOnly
 // const assertEqual = function(actual, expected) {
 
 //   if (actual === expected) {
