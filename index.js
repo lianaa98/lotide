@@ -23,6 +23,7 @@ module.exports = {
   countLetters,
   countOnly,
   findKey,
+  findKeyByValue,
   flatten,
   letterPositions,
   map,
